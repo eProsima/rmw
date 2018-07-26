@@ -164,6 +164,22 @@ rmw_create_publisher(
 RMW_PUBLIC
 RMW_WARN_UNUSED
 rmw_ret_t
+rmw_publisher_attach_matched_guard(
+  rmw_publisher_t * publisher,
+  rmw_guard_condition_t * matched_guard_condition
+);
+
+RMW_PUBLIC
+RMW_WARN_UNUSED
+rmw_ret_t
+rmw_publisher_count_subscribers(
+  const rmw_publisher_t * publisher,
+  size_t * count
+);
+
+RMW_PUBLIC
+RMW_WARN_UNUSED
+rmw_ret_t
 rmw_destroy_publisher(rmw_node_t * node, rmw_publisher_t * publisher);
 
 RMW_PUBLIC
